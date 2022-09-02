@@ -6,25 +6,27 @@
     width: 528px;
     background-color: #ffffff;
     border-radius: 4px;
+
+    &-body {
+        padding: 40px;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-title {
+        text-align: center;
+        margin-bottom: 12px;
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.03em;
+        color: $titleColor;
+    }
 }
 
-.modal-body {
-    padding: 40px;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
 
-.modal-title {
-    text-align: center;
-    margin-bottom: 12px;
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: 0.03em;
-    color: $titleColor;
-}
 .close-btn {
     position: fixed;
     top: 17px;
@@ -39,30 +41,35 @@
     width: 30px;
     height: 30px;
     transition: fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: $accentColor;
+        border-color: $accentColor;
+        outline: $accentColor;
+    }
 }
 
-.close-btn:hover,
-.close-btn:focus {
-    fill: $accentColor;
-    border-color: $accentColor;
-    outline: $accentColor;
-}
-.field-label {
-    margin-top: 10px;
-    margin-bottom: 4px;
-    display: block;
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: $primaryColor;
-}
+
+
 .field {
     position: relative;
     width: 100%;
     overflow-y: hidden;
+
+    &-label {
+        margin-top: 10px;
+        margin-bottom: 4px;
+        display: block;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: $primaryColor;
+    }
 }
+
 .field-input {
     display: block;
     outline: none;
@@ -75,22 +82,28 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.field-input:not(:focus),
-.textarea:not(:focus),
-.subscr-field:not(:focus) {
-    cursor: pointer;
+
+    &:not(:focus),
+    .textarea:not(:focus),
+    .subscr-field:not(:focus) {
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $accentColor;
+    }
+
+    &:hover+svg,
+    &t:focus+svg {
+        fill: $accentColor;
+    }
 }
 
-.field-input:hover,
-.field-input:focus {
-    border-color: $accentColor;
-}
 
-.field-input:hover+svg,
-.field-input:focus+svg {
-    fill: $accentColor;
-}
+
+
+
 .field-icon {
     position: absolute;
     box-sizing: border-box;
@@ -101,6 +114,7 @@
     fill: $titleColor;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .textarea {
     padding: 12px 16px;
     margin-bottom: 20px;
@@ -109,35 +123,27 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     height: 120px;
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+    }
+
+    &:focus {
+        border-color: $accentColor;
+        color: $accentColor;
+        outline: $accentColor;
+    }
 }
 
-.textarea::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-}
 
-.textarea:focus {
-    border-color: $accentColor;
-    color: $accentColor;
-    outline: $accentColor;
-}
-.checkbox-label {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
-.checkbox-input {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
+
+
+
 .checkbox {
     position: absolute;
     top: 0;
@@ -145,20 +151,38 @@
     opacity: 0;
     transform: translateY(-50%);
     pointer-events: all;
+
+    &-input {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &-label {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    &:checked+.check-mark-bg+.check-mark {
+        fill: $whiteColor;
+        opacity: 1;
+    }
+
+    &:checked+.check-mark-bg {
+        border-width: 0;
+        background-color: $accentColor;
+    }
+
+    &:focus+.check-mark-bg {
+        border: 1px solid $accentColor;
+    }
 }
 
-.checkbox:checked+.check-mark-bg+.check-mark {
-    fill: $whiteColor;
-    opacity: 1;
-}
 
-.checkbox:checked+.check-mark-bg {
-    border-width: 0;
-    background-color: $accentColor;
-}
-.checkbox:focus+.check-mark-bg {
-    border: 1px solid $accentColor;
-}
 .check-mark {
     position: absolute;
     top: 0;
@@ -166,23 +190,26 @@
     transform: translateY(-50%);
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &-bg {
+        border: 1px solid $titleColor;
+        border-radius: 2px;
+        width: 15px;
+        height: 14px;
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
-.check-mark-bg {
-    border: 1px solid $titleColor;
-    border-radius: 2px;
-    width: 15px;
-    height: 14px;
-    position: absolute;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    transform: translateY(-50%);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .user-agreement {
     color: $accentColor;
 }
+
 .center {
     margin: 0 auto;
 }

@@ -1,6 +1,7 @@
 .header-underline {
     border-bottom: 1px solid lightgrey;
 }
+
 .header-links {
     color: $primaryColor;
     list-style-type: none;
@@ -13,10 +14,11 @@
     align-items: stretch;
     max-width: 100%;
     height: 80px;
-}
-.header-links :hover,
-.header-links :focus {
-    color: $accentColor;
+
+    & :hover,
+    & :focus {
+        color: $accentColor;
+    }
 }
 
 .header-group {
@@ -36,13 +38,11 @@
     letter-spacing: 0.03em;
     color: $accentColor;
     list-style-type: none;
+
+    &:nth-last-child(3) {
+        margin-right: 93px;
+    }
 }
-
-.logo:nth-last-child(3) {
-    margin-right: 93px;
-}
-
-
 
 .link-container {
     height: 100%;
@@ -62,18 +62,16 @@
     flex-wrap: nowrap;
     margin-left: auto;
     padding-left: 0;
+
+    &>li:not(:last-of-type) {
+        margin-right: 50px;
+    }
+
+    & a:hover .header-icon,
+    & a:focus .header-icon {
+        fill: #2196f3;
+    }
 }
-
-.rightside-links>li:not(:last-of-type) {
-    margin-right: 50px;
-}
-
-.rightside-links a:hover .header-icon,
-.rightside-links a:focus .header-icon {
-    fill: #2196f3;
-}
-
-
 
 .header-contacts {
     display: inline-block;
@@ -98,22 +96,21 @@
     fill: #757575;
 }
 
-
 .current-page {
     position: relative;
     color: $accentColor;
     text-decoration: none;
     list-style-type: none;
-}
 
-.current-page::after {
-    display: block;
-    content: '';
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $accentColor;
+    &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accentColor;
+    }
 }
