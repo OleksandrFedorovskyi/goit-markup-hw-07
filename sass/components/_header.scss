@@ -1,0 +1,119 @@
+.header-underline {
+    border-bottom: 1px solid lightgrey;
+}
+.header-links {
+    color: var(--primary-text-color);
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: flex;
+    padding-left: 0;
+    align-items: stretch;
+    max-width: 100%;
+    height: 80px;
+}
+.header-links :hover,
+.header-links :focus {
+    color: var(--accent-text-color);
+}
+
+.header-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--accent-text-color);
+    list-style-type: none;
+}
+
+.logo:nth-last-child(3) {
+    margin-right: 93px;
+}
+
+
+
+.link-container {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rightside-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    padding-left: 0;
+}
+
+.rightside-links>li:not(:last-of-type) {
+    margin-right: 50px;
+}
+
+.rightside-links a:hover .header-icon,
+.rightside-links a:focus .header-icon {
+    fill: #2196f3;
+}
+
+
+
+.header-contacts {
+    display: inline-block;
+    color: var(--primary-text-color);
+    margin-top: 32px;
+    margin-bottom: 32px;
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-icon {
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+    fill: #757575;
+}
+
+
+.current-page {
+    position: relative;
+    color: var(--accent-text-color);
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.current-page::after {
+    display: block;
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-text-color);
+}
