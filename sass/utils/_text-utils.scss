@@ -1,13 +1,13 @@
 body {
     font-family: roboto, sans-serif;
-    color: var(--primary-text-color);
+    color: $primaryColor;
     line-height: 1.2;
     letter-spacing: 0.03em;
     font-size: 14px;
 }
 .text-decoration {
     text-decoration: none;
-    color: var(--title-text-color);
+    color: $titleColor;
 }
 
 .list {
@@ -15,7 +15,7 @@ body {
     list-style-type: none;
 }
 .title {
-    color: var(--title-text-color);
+    color: $titleColor;
 }
 .section-article {
     font-size: 36px;

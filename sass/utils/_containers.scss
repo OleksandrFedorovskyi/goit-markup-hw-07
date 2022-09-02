@@ -44,7 +44,7 @@ ul {
 
 .client-link-container:hover,
 .client-link-container:focus {
-    border-color: var(--accent-text-color);
+    border-color: $accentColor;
     outline: none;
 }
 .main-container {

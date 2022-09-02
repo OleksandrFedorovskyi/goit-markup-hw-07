@@ -24,7 +24,7 @@
 
 .socials-link-icon:hover,
 .socials-link-icon:focus {
-    background-color: var(--accent-text-color);
+    background-color: $accentColor;
     outline: none;
-    fill: var(--white-text-color);
+    fill: $whiteColor;
 }
