@@ -24,11 +24,12 @@
     outline: none;
   }
 
-  &-container {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 56px;
-  }
+}
+
+.project-filter-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 56px;
 }
