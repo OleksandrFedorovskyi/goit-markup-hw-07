@@ -341,16 +341,16 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.list-content-item {
+.list-content__item {
   display: block;
   position: relative;
 }
 
-.list-content-immage {
+.list-content__immage {
   display: block;
 }
 
-.list-content-text {
+.list-content__text {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -369,13 +369,13 @@ ul {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.team {
+.team-card__member {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
 }
 
-.team-spec {
+.team-card__spec {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -383,7 +383,7 @@ ul {
   margin-bottom: 28px;
 }
 
-.team-card {
+.team-card__info {
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 30px;
@@ -401,7 +401,7 @@ ul {
   top: 1632px;
 }
 
-.team-section-background {
+.team-section--backgroundColor {
   display: flex;
   justify-content: center;
   background-color: #f5f4fa;
