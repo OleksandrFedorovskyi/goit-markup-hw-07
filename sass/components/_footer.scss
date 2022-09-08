@@ -105,7 +105,7 @@
 }
 
 .subscr-field {
-    font-family: 'Roboto';
+    font-family: '$fontPrimary';
     padding-left: 15px;
     padding-right: 15px;
     width: 358px;
@@ -133,7 +133,7 @@
     padding-left: 28px;
     padding-right: 62px;
     margin-left: 12px;
-    font-family: 'Roboto';
+    font-family: '$fontPrimary';
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
