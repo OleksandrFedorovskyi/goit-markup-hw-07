@@ -73,9 +73,6 @@
     margin-left: auto;
     padding-left: 0;
 
-    &>li:not(:last-of-type) {
-        margin-right: 50px;
-    }
 
     & a:hover .header-icon,
     & a:focus .header-icon {
